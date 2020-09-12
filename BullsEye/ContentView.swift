@@ -97,10 +97,11 @@ struct ContentView: View {
                 Text("\(round)").modifier(ValueStyle())
                 Spacer()
                 
-                Button(action: {}){HStack {
+                NavigationLink(destination: AboutView()){
+                    HStack {
                     Image("InfoIcon")
                     Text("Info").modifier(ButtonSmallTextStyle())
-                    }}.background(Image("Button")).modifier(Shadow())
+                }}.background(Image("Button")).modifier(Shadow())
                 
             }.padding(.bottom, 20)
             
